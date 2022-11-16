@@ -13,14 +13,16 @@ Build-Depends: debhelper (>= 12),
  librust-regex-1+perf-dev (>= 1.0.3-~~) <!nocheck>,
  librust-regex-1+std-dev (>= 1.0.3-~~) <!nocheck>,
  librust-termcolor-1+default-dev (>= 1.0.2-~~) <!nocheck>
-Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
-Uploaders:
+Maintainer: Pexip AS <packaging@pexip.com>
+XSBC-Pexip-Original-Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+XSBC-Pexip-Original-Uploaders:
  Wolfgang Silbermayr <wolfgang@silbermayr.at>
 Standards-Version: 4.5.1
 Vcs-Git: https://salsa.debian.org/rust-team/debcargo-conf.git [src/env-logger]
 Vcs-Browser: https://salsa.debian.org/rust-team/debcargo-conf/tree/master/src/env-logger
 X-Cargo-Crate: env_logger
 Rules-Requires-Root: no
+XS-Pexip-Upstream: http://ftp.debian.org/debian/ bookworm
 
 Package: librust-env-logger-dev
 Architecture: any
