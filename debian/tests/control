@@ -1,34 +1,34 @@
-Test-Command: /usr/share/cargo/bin/cargo-auto-test env_logger 0.9.0 --all-targets --all-features
+Test-Command: /usr/share/cargo/bin/cargo-auto-test env_logger 0.9.3 --all-targets --all-features
 Features: test-name=rust-env-logger:@
 Depends: dh-cargo (>= 18), @
 Restrictions: allow-stderr, skip-not-installable
 
-Test-Command: /usr/share/cargo/bin/cargo-auto-test env_logger 0.9.0 --all-targets --no-default-features
+Test-Command: /usr/share/cargo/bin/cargo-auto-test env_logger 0.9.3 --all-targets --no-default-features
 Features: test-name=librust-env-logger-dev:
 Depends: dh-cargo (>= 18), @
 Restrictions: allow-stderr, skip-not-installable
 
-Test-Command: /usr/share/cargo/bin/cargo-auto-test env_logger 0.9.0 --all-targets --no-default-features --features atty
+Test-Command: /usr/share/cargo/bin/cargo-auto-test env_logger 0.9.3 --all-targets --no-default-features --features atty
 Features: test-name=librust-env-logger+atty-dev:atty
 Depends: dh-cargo (>= 18), @
 Restrictions: allow-stderr, skip-not-installable
 
-Test-Command: /usr/share/cargo/bin/cargo-auto-test env_logger 0.9.0 --all-targets 
+Test-Command: /usr/share/cargo/bin/cargo-auto-test env_logger 0.9.3 --all-targets
 Features: test-name=librust-env-logger+default-dev:default
 Depends: dh-cargo (>= 18), @
 Restrictions: allow-stderr, skip-not-installable
 
-Test-Command: /usr/share/cargo/bin/cargo-auto-test env_logger 0.9.0 --all-targets --no-default-features --features humantime
+Test-Command: /usr/share/cargo/bin/cargo-auto-test env_logger 0.9.3 --all-targets --no-default-features --features humantime
 Features: test-name=librust-env-logger+humantime-dev:humantime
 Depends: dh-cargo (>= 18), @
 Restrictions: allow-stderr, skip-not-installable
 
-Test-Command: /usr/share/cargo/bin/cargo-auto-test env_logger 0.9.0 --all-targets --no-default-features --features regex
+Test-Command: /usr/share/cargo/bin/cargo-auto-test env_logger 0.9.3 --all-targets --no-default-features --features regex
 Features: test-name=librust-env-logger+regex-dev:regex
 Depends: dh-cargo (>= 18), @
 Restrictions: allow-stderr, skip-not-installable
 
-Test-Command: /usr/share/cargo/bin/cargo-auto-test env_logger 0.9.0 --all-targets --no-default-features --features termcolor
+Test-Command: /usr/share/cargo/bin/cargo-auto-test env_logger 0.9.3 --all-targets --no-default-features --features termcolor
 Features: test-name=librust-env-logger+termcolor-dev:termcolor
 Depends: dh-cargo (>= 18), @
 Restrictions: allow-stderr, skip-not-installable
