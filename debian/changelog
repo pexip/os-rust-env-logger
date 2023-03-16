@@ -1,3 +1,9 @@
+rust-env-logger (0.9.3-1pexip1) pexip; urgency=medium
+
+  * New upstream release
+
+ -- Huw Jones <huw@pexip.com>  Thu, 16 Mar 2023 18:08:29 +0000
+
 rust-env-logger (0.9.3-1) unstable; urgency=medium
 
   * Team upload.
