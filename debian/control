@@ -2,7 +2,7 @@ Source: rust-env-logger
 Section: rust
 Priority: optional
 Build-Depends: debhelper (>= 12),
- dh-cargo (>= 24),
+ dh-cargo (>= 25),
  cargo:native <!nocheck>,
  rustc:native <!nocheck>,
  libstd-rust-dev <!nocheck>,
@@ -12,12 +12,12 @@ Build-Depends: debhelper (>= 12),
  librust-log-0.4+std-dev (>= 0.4.8-~~) <!nocheck>,
  librust-regex-1+perf-dev (>= 1.0.3-~~) <!nocheck>,
  librust-regex-1+std-dev (>= 1.0.3-~~) <!nocheck>,
- librust-termcolor-1+default-dev (>= 1.0.2-~~) <!nocheck>
+ librust-termcolor-1+default-dev (>= 1.1.1-~~) <!nocheck>
 Maintainer: Pexip AS <packaging@pexip.com>
 XSBC-Pexip-Original-Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
 XSBC-Pexip-Original-Uploaders:
  Wolfgang Silbermayr <wolfgang@silbermayr.at>
-Standards-Version: 4.5.1
+Standards-Version: 4.6.1
 Vcs-Git: https://salsa.debian.org/rust-team/debcargo-conf.git [src/env-logger]
 Vcs-Browser: https://salsa.debian.org/rust-team/debcargo-conf/tree/master/src/env-logger
 X-Cargo-Crate: env_logger
@@ -41,8 +41,8 @@ Suggests:
 Provides:
  librust-env-logger-0-dev (= ${binary:Version}),
  librust-env-logger-0.9-dev (= ${binary:Version}),
- librust-env-logger-0.9.0-dev (= ${binary:Version})
-Description: Logging implementation for `log` which is configured via an environment variable - Rust source code
+ librust-env-logger-0.9.3-dev (= ${binary:Version})
+Description: Log implementation configured via environment variable - Rust source code
  This package contains the source for the Rust env_logger crate, packaged by
  debcargo for use with cargo and dh-cargo.
 
@@ -56,8 +56,8 @@ Depends:
 Provides:
  librust-env-logger-0+atty-dev (= ${binary:Version}),
  librust-env-logger-0.9+atty-dev (= ${binary:Version}),
- librust-env-logger-0.9.0+atty-dev (= ${binary:Version})
-Description: Logging implementation for `log` which is configured via an environment variable - feature "atty"
+ librust-env-logger-0.9.3+atty-dev (= ${binary:Version})
+Description: Log implementation configured via environment variable - feature "atty"
  This metapackage enables feature "atty" for the Rust env_logger crate, by
  pulling in any additional dependencies needed by that feature.
 
@@ -67,16 +67,15 @@ Multi-Arch: same
 Depends:
  ${misc:Depends},
  librust-env-logger-dev (= ${binary:Version}),
- librust-atty-0.2+default-dev (>= 0.2.5-~~),
- librust-humantime-2+default-dev,
- librust-regex-1+perf-dev (>= 1.0.3-~~),
- librust-regex-1+std-dev (>= 1.0.3-~~),
- librust-termcolor-1+default-dev (>= 1.0.2-~~)
+ librust-env-logger+termcolor-dev (= ${binary:Version}),
+ librust-env-logger+atty-dev (= ${binary:Version}),
+ librust-env-logger+humantime-dev (= ${binary:Version}),
+ librust-env-logger+regex-dev (= ${binary:Version})
 Provides:
  librust-env-logger-0+default-dev (= ${binary:Version}),
  librust-env-logger-0.9+default-dev (= ${binary:Version}),
- librust-env-logger-0.9.0+default-dev (= ${binary:Version})
-Description: Logging implementation for `log` which is configured via an environment variable - feature "default"
+ librust-env-logger-0.9.3+default-dev (= ${binary:Version})
+Description: Log implementation configured via environment variable - feature "default"
  This metapackage enables feature "default" for the Rust env_logger crate, by
  pulling in any additional dependencies needed by that feature.
 
@@ -90,8 +89,8 @@ Depends:
 Provides:
  librust-env-logger-0+humantime-dev (= ${binary:Version}),
  librust-env-logger-0.9+humantime-dev (= ${binary:Version}),
- librust-env-logger-0.9.0+humantime-dev (= ${binary:Version})
-Description: Logging implementation for `log` which is configured via an environment variable - feature "humantime"
+ librust-env-logger-0.9.3+humantime-dev (= ${binary:Version})
+Description: Log implementation configured via environment variable - feature "humantime"
  This metapackage enables feature "humantime" for the Rust env_logger crate, by
  pulling in any additional dependencies needed by that feature.
 
@@ -106,8 +105,8 @@ Depends:
 Provides:
  librust-env-logger-0+regex-dev (= ${binary:Version}),
  librust-env-logger-0.9+regex-dev (= ${binary:Version}),
- librust-env-logger-0.9.0+regex-dev (= ${binary:Version})
-Description: Logging implementation for `log` which is configured via an environment variable - feature "regex"
+ librust-env-logger-0.9.3+regex-dev (= ${binary:Version})
+Description: Log implementation configured via environment variable - feature "regex"
  This metapackage enables feature "regex" for the Rust env_logger crate, by
  pulling in any additional dependencies needed by that feature.
 
@@ -117,11 +116,11 @@ Multi-Arch: same
 Depends:
  ${misc:Depends},
  librust-env-logger-dev (= ${binary:Version}),
- librust-termcolor-1+default-dev (>= 1.0.2-~~)
+ librust-termcolor-1+default-dev (>= 1.1.1-~~)
 Provides:
  librust-env-logger-0+termcolor-dev (= ${binary:Version}),
  librust-env-logger-0.9+termcolor-dev (= ${binary:Version}),
- librust-env-logger-0.9.0+termcolor-dev (= ${binary:Version})
-Description: Logging implementation for `log` which is configured via an environment variable - feature "termcolor"
+ librust-env-logger-0.9.3+termcolor-dev (= ${binary:Version})
+Description: Log implementation configured via environment variable - feature "termcolor"
  This metapackage enables feature "termcolor" for the Rust env_logger crate, by
  pulling in any additional dependencies needed by that feature.
